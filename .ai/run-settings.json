@@ -1,0 +1,46 @@
+{
+  "args": {
+    "model": "C:\\Users\\kth59\\OneDrive\\Desktop\\tjs\\ghi_model_int8.tflite",
+    "valinput": "",
+    "valoutput": "",
+    "batch-size": 10,
+    "mode": "host",
+    "st-neural-art": "default",
+    "atonnOptions": {
+      "native-float": true,
+      "cache-maintenance": true,
+      "Ocache-opt": true,
+      "enable-virtual-mem-pools": true,
+      "Os": true,
+      "Oauto-sched": true,
+      "enable-epoch-controller": true
+    },
+    "name": "network",
+    "verbosity": 1,
+    "c-api": "st-ai",
+    "workspace": "C:\\Users\\kth59\\.stm32cubeaistudio\\workspace\\mppt\\.ai\\st_ai_ws",
+    "output": "C:\\Users\\kth59\\.stm32cubeaistudio\\workspace\\mppt\\.ai\\st_ai_output",
+    "memory-pool": "C:\\Users\\kth59\\.stm32cubeaistudio\\workspace\\mppt\\.ai\\mempools.json",
+    "target": "stm32n6"
+  },
+  "mempools": [
+    {
+      "driver": "RAM",
+      "size": 1413530,
+      "offset": 872939520,
+      "name": "POOL_0_RAM",
+      "max": 1572864,
+      "noload": true
+    },
+    {
+      "driver": "AXISRAM3_4_5_6",
+      "size": 1835008,
+      "offset": 874512384,
+      "name": "POOL_1_AXISRAM3_4_5_6",
+      "max": 1835008,
+      "noload": true
+    }
+  ],
+  "automaticMempools": true,
+  "automaticFlash": true
+}

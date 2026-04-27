@@ -1,0 +1,44 @@
+{
+  "memory": {
+    "mempools": [
+      {
+        "name": "POOL_0_RAM",
+        "prop": {
+          "throughput": "HIGH",
+          "latency": "LOW"
+        },
+        "usable_size": {
+          "value": "1413530",
+          "magnitude": "BYTES"
+        },
+        "size": {
+          "value": "1572864",
+          "magnitude": "BYTES"
+        },
+        "offset": {
+          "value": "0x34080000",
+          "magnitude": "BYTES"
+        }
+      },
+      {
+        "name": "POOL_1_AXISRAM3_4_5_6",
+        "prop": {
+          "throughput": "HIGH",
+          "latency": "MID"
+        },
+        "usable_size": {
+          "value": "1835008",
+          "magnitude": "BYTES"
+        },
+        "size": {
+          "value": "1835008",
+          "magnitude": "BYTES"
+        },
+        "offset": {
+          "value": "0x34200000",
+          "magnitude": "BYTES"
+        }
+      }
+    ]
+  }
+}

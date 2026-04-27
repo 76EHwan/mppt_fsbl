@@ -1,0 +1,13 @@
+../../../Middlewares/ST/AI/Npu/ll_aton_NN_interface.h:494:32:LL_Buffer_addr_base	2
+../../../Middlewares/ST/AI/Npu/ll_aton_NN_interface.h:504:32:LL_Buffer_addr_start	1
+../../../Middlewares/ST/AI/Npu/ll_aton_rt_user_api.h:355:46:LL_ATON_Output_Buffers_Info	3
+../../../Middlewares/ST/AI/Npu/ll_aton_rt_user_api.h:376:46:LL_ATON_Input_Buffers_Info	3
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/app_x-cube-ai.c:87:5:aiInit	1
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/app_x-cube-ai.c:100:5:aiDeinit	1
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/app_x-cube-ai.c:110:5:aiRun	3
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/app_x-cube-ai.c:126:5:acquire_and_process_data	1
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/app_x-cube-ai.c:138:5:post_process	1
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/app_x-cube-ai.c:155:6:main_loop	1
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/app_x-cube-ai.c:173:6:STM32CubeAI_Studio_AI_Init	1
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/app_x-cube-ai.c:182:6:STM32CubeAI_Studio_AI_Process	1
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/app_x-cube-ai.c:187:6:STM32CubeAI_Studio_AI_Deinit	1

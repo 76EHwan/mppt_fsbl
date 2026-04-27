@@ -1,0 +1,13 @@
+{
+  "toolchain": "STM32CubeIDE",
+  "variant": "Validation",
+  "fromMx": false,
+  "name": "run-1",
+  "createdAt": 1777320922479,
+  "lastModified": 1777320936422,
+  "lastAccessed": 1777320936420,
+  "path": "C:\\Users\\kth59\\.stm32cubeaistudio\\workspace\\mppt",
+  "board": "NUCLEO-N657X0-Q",
+  "mcu": "",
+  "type": "BYOM"
+}

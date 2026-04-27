@@ -1,0 +1,20 @@
+{
+  "toolchain": "STM32CubeIDE",
+  "variant": "ApplicationTemplate",
+  "fromMx": false,
+  "name": "mppt",
+  "createdAt": 1777320922479,
+  "lastModified": 1777321430309,
+  "lastAccessed": 1777321167170,
+  "path": "C:\\Users\\kth59\\.stm32cubeaistudio\\workspace",
+  "board": "NUCLEO-N657X0-Q",
+  "mcu": "",
+  "type": "BYOM",
+  "context": "Appli",
+  "contextProject": "FullSecure",
+  "uartInstance": {
+    "usart": "LPUART1",
+    "txpin": "PE5",
+    "rxpin": "PE6"
+  }
+}

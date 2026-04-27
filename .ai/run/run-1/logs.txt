@@ -1,0 +1,115 @@
+>>> D:\STAI\4.0\Utilities\windows\stedgeai.exe analyze --model C:\Users\kth59\OneDrive\Desktop\tjs\ghi_model_int8.tflite --batch-size 10 --mode host --st-neural-art custom@C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\profile-neural-art.json --name network --verbosity 1 --c-api st-ai --target stm32n6 --workspace C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_ws --output C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_output
+ST Edge AI Core v4.0.0-20500 359356bb0
+
+ >>>> EXECUTING NEURAL ART COMPILER
+   D:/STAI/4.0/Utilities/windows/atonn.exe -i "C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/.ai/run/run-1/.ai/st_ai_output/ghi_model_int8_OE_3_3_1.onnx" --json-quant-file "C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/.ai/run/run-1/.ai/st_ai_output/ghi_model_int8_OE_3_3_1_Q.json" -g "network.c" --load-mdesc "D:/STAI/4.0/Utilities/configs/stm32n6.mdesc" --load-mpool "C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/.ai/run/run-1/.ai/memory_pool.mpool" --load-cdesc D:/STAI/4.0/Utilities/configs/cortex-m55.cdesc --save-mpool-file "C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/.ai/run/run-1/.ai/st_ai_ws/neural_art__network/memory_pool.mpool" --out-dir-prefix "C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/.ai/run/run-1/.ai/st_ai_ws/neural_art__network/" --network-name "network" --native-float --cache-maintenance --Ocache-opt --enable-virtual-mem-pools --Os --Oauto-sched --native-float --cache-maintenance --Ocache-opt --enable-virtual-mem-pools --Os --Oauto-sched --enable-epoch-controller --output-info-file "c_info.json" --generate-stai
+
+ <<<< DONE EXECUTING NEURAL ART COMPILER
+
+ >>>> EXECUTING EPOCH_CONTROLLER POST_PROCESSING
+
+ <<<< DONE EXECUTING EPOCH_CONTROLLER POST_PROCESSING
+
+ Exec/report summary (analyze)
+ ---------------------------------------------------------------------------------------------------------
+ model file         :   C:\Users\kth59\OneDrive\Desktop\tjs\ghi_model_int8.tflite                         
+ type               :   tflite                                                                            
+ c_name             :   network                                                                           
+ compression        :   lossless                                                                          
+ options            :   allocate-inputs, allocate-outputs, use-lite-runtime, use-st-ai                    
+ optimization       :   balanced                                                                          
+ target/series      :   stm32n6npu                                                                        
+ workspace dir      :   C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_ws       
+ output dir         :   C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_output   
+ model_fmt          :   float                                                                             
+ model_name         :   ghi_model_int8                                                                    
+ model_hash         :   0xf1c5ddcd156e41157d6cda50dc67b0b5                                                
+ params #           :   2,291,473 items (2.23 MiB)                                                        
+ ---------------------------------------------------------------------------------------------------------
+ input 1/2          :   'Input_248_out_0', f32(1x2), 8 Bytes, activations                                 
+ input 2/2          :   'Input_0_out_0', f32(1x128x128x3), 192.00 KBytes, activations                     
+ inputs (total)     :   192.01 KBytes                                                                     
+ output 1/1         :   'Dequantize_262_out_0', f32(1x1), 4 Bytes, activations                            
+ macc               :   101,579,312                                                                       
+ weights (ro)       :   2,497,617 B (2.38 MiB) (1 segment) / -6,668,275(-72.8%) vs float model            
+ activations (rw)   :   491,600 B (480.08 KiB) (2 segments) *                                             
+ ram (total)        :   491,600 B (480.08 KiB) = 491,600 + 0 + 0                                          
+ ---------------------------------------------------------------------------------------------------------
+ (*) 'input'/'output' buffers are allocated in the activations buffer
+
+Computing AI RT data/code size (target=stm32n6npu)..
+
+   >>> Shell execution has FAILED (returned code = 1)
+   $ arm-none-eabi-gcc -mthumb -mcpu=cortex-m55 -mtune=cortex-m55 -mfloat-abi=hard -Wall -Wextra -Wundef -Wstrict-prototypes -g3 -gdwarf-3 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fomit-frame-pointer -falign-functions=16 -Os -DUSE_FULL_LL_DRIVER -DLL_ATON_PLATFORM=LL_ATON_PLAT_SWEMUL -DLL_ATON_OSAL=LL_ATON_OSAL_BARE_METAL -DLL_ATON_RT_MODE=LL_ATON_RT_POLLING -DLL_ATON_SW_FALLBACK -I C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_ws\generated_network -I D:\STAI\4.0\Middlewares\ST\AI\Inc -I D:\STAI\4.0\Middlewares\ST\AI\Npu\ll_aton -I D:\STAI\4.0\Middlewares\ST\AI\Npu\Devices\STM32N6xx -c D:\STAI\4.0\Middlewares\ST\AI\Npu\ll_aton\ll_aton_cipher.c
+   In file included from D:\STAI\4.0\Middlewares\ST\AI\Npu\ll_aton\ll_aton_osal.h:24,
+
+                    from D:\STAI\4.0\Middlewares\ST\AI\Npu\ll_aton\ll_aton.h:35,
+                    from D:\STAI\4.0\Middlewares\ST\AI\Npu\ll_aton\ll_aton_cipher.c:20:
+   D:\STAI\4.0\Middlewares\ST\AI\Npu\ll_aton\ll_aton_cipher.c: In function 'LL_ExtDmaCypherInit':
+   D:\STAI\4.0\Middlewares\ST\AI\Npu\ll_aton\ll_aton_platform.h:264:23: error: implicit declaration of function '__DSB' [-Wimplicit-function-declaration]
+     264 | #define LL_ATON_DSB() __DSB()
+         |                       ^~~~~
+   D:\STAI\4.0\Middlewares\ST\AI\Npu\ll_aton\ll_aton_cipher.c:489:3: note: in expansion of macro 'LL_ATON_DSB'
+     489 |   LL_ATON_DSB();
+         |   ^~~~~~~~~~~
+   <<<
+
+Compilation details
+   ---------------------------------------------------------------------------------
+Compiler version: 1.1.3-262
+Compiler arguments:  -i C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_output\ghi_model_int8_OE_3_3_1.onnx --json-quant-file C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_output\ghi_model_int8_OE_3_3_1_Q.json -g network.c --load-mdesc D:\STAI\4.0\Utilities\configs\stm32n6.mdesc --load-mpool C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\memory_pool.mpool --load-cdesc D:\STAI\4.0\Utilities\configs\cortex-m55.cdesc --save-mpool-file C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_ws\neural_art__network\memory_pool.mpool --out-dir-prefix C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_ws\neural_art__network/ --network-name network --native-float --cache-maintenance --Ocache-opt --enable-virtual-mem-pools --Os --Oauto-sched --native-float --cache-maintenance --Ocache-opt --enable-virtual-mem-pools --Os --Oauto-sched --enable-epoch-controller --output-info-file c_info.json --generate-stai
+
+====================================================================================
+Memory usage information  (input/output buffers are included in activations)
+   ---------------------------------------------------------------------------------
+	flexMEM    [0x34000000 - 0x34000000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	cpuRAM1    [0x34064000 - 0x34064000]:          0  B /          0  B  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	cpuRAM2    [0x34100000 - 0x34200000]:          0  B /      1.000 MB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	npuRAM3    [0x34200000 - 0x34270000]:          0  B /    448.000 kB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	npuRAM4    [0x34270000 - 0x342E0000]:     96.000 kB /    448.000 kB  ( 21.43 % used) -- weights:          0  B (  0.00 % used)  activations:     96.000 kB ( 21.43 % used)
+	npuRAM5    [0x342E0000 - 0x34350000]:    384.078 kB /    448.000 kB  ( 85.73 % used) -- weights:          0  B (  0.00 % used)  activations:    384.078 kB ( 85.73 % used)
+	npuRAM6    [0x34350000 - 0x343C0000]:          0  B /    448.000 kB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+	octoFlash  [0x71000000 - 0x78000000]:      2.382 MB /    112.000 MB  (  2.13 % used) -- weights:      2.382 MB (  2.13 % used)  activations:          0  B (  0.00 % used)
+
+	hyperRAM   [0x90000000 - 0x92000000]:          0  B /     32.000 MB  (  0.00 % used) -- weights:          0  B (  0.00 % used)  activations:          0  B (  0.00 % used)
+Total:                                             2.851 MB                                  -- weights:      2.382 MB                  activations:    480.078 kB
+
+====================================================================================
+Used memory ranges
+   ---------------------------------------------------------------------------------
+	npuRAM4    [0x34270000 - 0x342E0000]: 0x34270000-0x34288000
+
+	npuRAM5    [0x342E0000 - 0x34350000]: 0x342E0000-0x34340050
+
+	octoFlash  [0x71000000 - 0x78000000]: 0x71000000-0x71261C60
+
+====================================================================================
+
+Epochs details
+
+   ---------------------------------------------------------------------------------
+Total number of epochs                               60
+>> pure software (SW) epochs                          3
+
+>> hybrid epochs (using both software and hardware)   0
+>> pure hardware (HW or EC) epochs                   57  (implemented in 1 epoch controller blobs/meta epochs)
+
++-------------------+------+------------------+
+| epoch ID          | Type |     Details      |
++-------------------+------+------------------+
+
+| epoch_1           |  SW  |  QuantizeLinear  |
+
+| epoch_2           |  SW  |  QuantizeLinear  |
+
+| epochs    3 -> 60 |  EC  |                  |
+
+| epoch_61          |  SW  | DequantizeLinear |
++-------------------+------+------------------+
+
+====================================================================================
+
+Creating txt report file C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\.ai\run\run-1\.ai\st_ai_output\network_analyze_report.txt
+
+elapsed time (ANALYZE): 139.605s
+

@@ -1,0 +1,6 @@
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Middlewares/ST/AI/Misc/Src/aiTestHelper.c:41:6:aiPlatformVersion	40	static
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Middlewares/ST/AI/Misc/Src/aiTestHelper.c:60:6:aiLogErr	16	static
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Middlewares/ST/AI/Misc/Src/aiTestHelper.c:70:20:aiPrintDataType	16	static
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Middlewares/ST/AI/Misc/Src/aiTestHelper.c:83:6:aiPrintBufferInfo	56	static
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Middlewares/ST/AI/Misc/Src/aiTestHelper.c:149:13:_aiPrintDataInfo	32	static
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Middlewares/ST/AI/Misc/Src/aiTestHelper.c:160:6:aiPrintNetworkInfo	40	static
