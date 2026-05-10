@@ -143,6 +143,11 @@
 			<locationURI>PARENT-2-PROJECT_LOC/FSBL/Core/Src/extmem_manager.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/Core/gpio.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/FSBL/Core/Src/gpio.c</locationURI>
+		</link>
+		<link>
 			<name>Application/User/Core/main.c</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/FSBL/Core/Src/main.c</locationURI>
@@ -156,6 +161,16 @@
 			<name>Application/User/Core/stm32n6xx_it.c</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/FSBL/Core/Src/stm32n6xx_it.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/xspi.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/FSBL/Core/Src/xspi.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/xspim.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/FSBL/Core/Src/xspim.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_xspi.c</name>

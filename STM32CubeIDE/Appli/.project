@@ -131,6 +131,16 @@
 			<locationURI>PARENT-2-PROJECT_LOC/Appli/AI/App/npu_init.c</locationURI>
 		</link>
 		<link>
+			<name>Application/User/Core/cacheaxi.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Appli/Core/Src/cacheaxi.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/gpio.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Appli/Core/Src/gpio.c</locationURI>
+		</link>
+		<link>
 			<name>Application/User/Core/main.c</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/Appli/Core/Src/main.c</locationURI>
@@ -149,6 +159,11 @@
 			<name>Application/User/Core/stm32n6xx_it.c</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/Appli/Core/Src/stm32n6xx_it.c</locationURI>
+		</link>
+		<link>
+			<name>Application/User/Core/usart.c</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Appli/Core/Src/usart.c</locationURI>
 		</link>
 		<link>
 			<name>Middlewares/ST/AI/Npu/ecloader.c</name>

@@ -18,6 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cacheaxi.h"
+#include "usart.h"
+#include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -40,9 +43,6 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-CACHEAXI_HandleTypeDef hcacheaxi;
-
-UART_HandleTypeDef hlpuart1;
 
 /* USER CODE BEGIN PV */
 
@@ -50,9 +50,6 @@ UART_HandleTypeDef hlpuart1;
 
 /* Private function prototypes -----------------------------------------------*/
 static void MPU_Config(void);
-static void MX_GPIO_Init(void);
-static void MX_CACHEAXI_Init(void);
- void MX_LPUART1_UART_Init(void);
 static void SystemIsolation_Config(void);
 /* USER CODE BEGIN PFP */
 
@@ -95,7 +92,6 @@ int main(void)
   SystemIsolation_Config();
   /* USER CODE BEGIN 2 */
 
-//	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0, GPIO_PIN_RESET);
 
 	STM32CubeAI_Studio_AI_Init();
   /* USER CODE END 2 */
@@ -104,85 +100,13 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 	while (1) {
 		STM32CubeAI_Studio_AI_Process();
+		HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_0);
+		HAL_Delay(100);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 	}
   /* USER CODE END 3 */
-}
-
-/**
-  * @brief CACHEAXI Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_CACHEAXI_Init(void)
-{
-
-  /* USER CODE BEGIN CACHEAXI_Init 0 */
-
-  /* USER CODE END CACHEAXI_Init 0 */
-
-  /* USER CODE BEGIN CACHEAXI_Init 1 */
-
-  /* USER CODE END CACHEAXI_Init 1 */
-  hcacheaxi.Instance = CACHEAXI;
-  if (HAL_CACHEAXI_Init(&hcacheaxi) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN CACHEAXI_Init 2 */
-
-  /* USER CODE END CACHEAXI_Init 2 */
-
-}
-
-/**
-  * @brief LPUART1 Initialization Function
-  * @param None
-  * @retval None
-  */
-void MX_LPUART1_UART_Init(void)
-{
-
-  /* USER CODE BEGIN LPUART1_Init 0 */
-
-  /* USER CODE END LPUART1_Init 0 */
-
-  /* USER CODE BEGIN LPUART1_Init 1 */
-
-  /* USER CODE END LPUART1_Init 1 */
-  hlpuart1.Instance = LPUART1;
-  hlpuart1.Init.BaudRate = 115200;
-  hlpuart1.Init.WordLength = UART_WORDLENGTH_8B;
-  hlpuart1.Init.StopBits = UART_STOPBITS_1;
-  hlpuart1.Init.Parity = UART_PARITY_NONE;
-  hlpuart1.Init.Mode = UART_MODE_TX_RX;
-  hlpuart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  hlpuart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-  hlpuart1.Init.ClockPrescaler = UART_PRESCALER_DIV1;
-  hlpuart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
-  hlpuart1.FifoMode = UART_FIFOMODE_DISABLE;
-  if (HAL_UART_Init(&hlpuart1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_SetTxFifoThreshold(&hlpuart1, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_SetRxFifoThreshold(&hlpuart1, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_UARTEx_DisableFifoMode(&hlpuart1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN LPUART1_Init 2 */
-
-  /* USER CODE END LPUART1_Init 2 */
-
 }
 
 /**
@@ -193,9 +117,9 @@ void MX_LPUART1_UART_Init(void)
   static void SystemIsolation_Config(void)
 {
 
-  /* USER CODE BEGIN RIF_Init 0 */
+/* USER CODE BEGIN RIF_Init 0 */
 
-  /* USER CODE END RIF_Init 0 */
+/* USER CODE END RIF_Init 0 */
 
   /* set all required IPs as secure privileged */
   __HAL_RCC_RIFSC_CLK_ENABLE();
@@ -228,90 +152,17 @@ void MX_LPUART1_UART_Init(void)
   HAL_GPIO_ConfigPinAttributes(GPIOE,GPIO_PIN_3,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOE,GPIO_PIN_5,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOE,GPIO_PIN_6,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
-  HAL_GPIO_ConfigPinAttributes(GPIOG,GPIO_PIN_0,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
-  HAL_GPIO_ConfigPinAttributes(GPIOG,GPIO_PIN_8,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
-  HAL_GPIO_ConfigPinAttributes(GPIOG,GPIO_PIN_10,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOH,GPIO_PIN_9,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPION,GPIO_PIN_7,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
   HAL_GPIO_ConfigPinAttributes(GPIOO,GPIO_PIN_5,GPIO_PIN_SEC|GPIO_PIN_NPRIV);
 
-  /* USER CODE BEGIN RIF_Init 1 */
+/* USER CODE BEGIN RIF_Init 1 */
 
-  /* USER CODE END RIF_Init 1 */
-  /* USER CODE BEGIN RIF_Init 2 */
+/* USER CODE END RIF_Init 1 */
+/* USER CODE BEGIN RIF_Init 2 */
 
-  /* USER CODE END RIF_Init 2 */
+/* USER CODE END RIF_Init 2 */
 
-}
-
-/**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_GPIO_Init(void)
-{
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
-  /* USER CODE BEGIN MX_GPIO_Init_1 */
-
-  /* USER CODE END MX_GPIO_Init_1 */
-
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOE_CLK_ENABLE();
-  __HAL_RCC_GPIOO_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPION_CLK_ENABLE();
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(PWR_EN_GPIO_Port, PWR_EN_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(CAM_NRST_GPIO_Port, CAM_NRST_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, UCPD1_ISENSE_Pin|UCPD_PWR_EN_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(USB1_OCP_GPIO_Port, USB1_OCP_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : PWR_EN_Pin */
-  GPIO_InitStruct.Pin = PWR_EN_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(PWR_EN_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : UCPD1_INT_Pin */
-  GPIO_InitStruct.Pin = UCPD1_INT_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(UCPD1_INT_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : CAM_NRST_Pin */
-  GPIO_InitStruct.Pin = CAM_NRST_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(CAM_NRST_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : UCPD1_ISENSE_Pin UCPD_PWR_EN_Pin */
-  GPIO_InitStruct.Pin = UCPD1_ISENSE_Pin|UCPD_PWR_EN_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : USB1_OCP_Pin */
-  GPIO_InitStruct.Pin = USB1_OCP_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(USB1_OCP_GPIO_Port, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN MX_GPIO_Init_2 */
-
-  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
