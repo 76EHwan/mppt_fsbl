@@ -13,6 +13,7 @@ RM := rm -rf
 -include Middlewares/ST/AI/Misc/Src/subdir.mk
 -include Drivers/STM32N6xx_HAL_Driver/subdir.mk
 -include Drivers/CMSIS/subdir.mk
+-include BSP/subdir.mk
 -include Application/User/Startup/subdir.mk
 -include Application/User/Core/subdir.mk
 -include Appli/AI/App/subdir.mk
@@ -68,7 +69,7 @@ main-build: mppt_Appli.elf secondary-outputs
 
 # Tool invocations
 mppt_Appli.elf mppt_Appli.map: $(OBJS) $(USER_OBJS) C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\STM32CubeIDE\Appli\STM32N657X0HXQ_ROMxspi2.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "mppt_Appli.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m55 -T"C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\STM32CubeIDE\Appli\STM32N657X0HXQ_ROMxspi2.ld" --specs=nosys.specs -Wl,-Map="mppt_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o -L../../../Middlewares/ST/AI/Lib/NetworkRuntime1200_CM55_GCC.a --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "mppt_Appli.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m55 -T"C:\Users\kth59\.stm32cubeaistudio\workspace\mppt\STM32CubeIDE\Appli\STM32N657X0HXQ_ROMxspi2.ld" --specs=nosys.specs -Wl,-Map="mppt_Appli.map" -Wl,--gc-sections -static -Wl,--cmse-implib -Wl,--out-implib=./secure_nsclib.o --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

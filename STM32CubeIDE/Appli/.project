@@ -36,6 +36,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>BSP</name>
+			<type>2</type>
+			<location>C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo</location>
+		</link>
+		<link>
 			<name>Drivers/CMSIS/system_stm32n6xx_s.c</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/Appli/Core/Src/system_stm32n6xx_s.c</locationURI>

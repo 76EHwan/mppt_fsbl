@@ -27,7 +27,12 @@ Application/User/Core/main.o: \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_exti.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h \
+ ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h \
+ ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_xspi.h \
+ ../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo.h \
+ ../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h \
+ ../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h \
  ../../../FSBL/Core/Inc/extmem_manager.h \
  ../../../FSBL/Core/Inc/stm32_extmem_conf.h \
  ../../../Middlewares/ST/STM32_ExtMem_Manager/stm32_extmem.h \
@@ -38,8 +43,6 @@ Application/User/Core/main.o: \
  ../../../FSBL/Core/Inc/xspi.h ../../../FSBL/Core/Inc/main.h \
  ../../../FSBL/Core/Inc/xspim.h ../../../FSBL/Core/Inc/gpio.h \
  ../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_xspi.h \
- ../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h \
- ../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h \
  ../../../Drivers/BSP/STM32N6xx_Nucleo/../Components/mx25um51245g/mx25um51245g.h \
  ../../../Drivers/BSP/STM32N6xx_Nucleo/../Components/mx25um51245g/mx25um51245g_conf.h \
  ../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h
@@ -70,7 +73,12 @@ Application/User/Core/main.o: \
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_exti.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h:
+../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h:
+../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_xspi.h:
+../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo.h:
+../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h:
+../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h:
 ../../../FSBL/Core/Inc/extmem_manager.h:
 ../../../FSBL/Core/Inc/stm32_extmem_conf.h:
 ../../../Middlewares/ST/STM32_ExtMem_Manager/stm32_extmem.h:
@@ -83,8 +91,6 @@ Application/User/Core/main.o: \
 ../../../FSBL/Core/Inc/xspim.h:
 ../../../FSBL/Core/Inc/gpio.h:
 ../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_xspi.h:
-../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h:
-../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h:
 ../../../Drivers/BSP/STM32N6xx_Nucleo/../Components/mx25um51245g/mx25um51245g.h:
 ../../../Drivers/BSP/STM32N6xx_Nucleo/../Components/mx25um51245g/mx25um51245g_conf.h:
 ../../../Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h:

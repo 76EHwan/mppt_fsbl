@@ -27,7 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "stm32n6xx_nucleo_xspi.h"
 #include "stm32n6xx_nucleo_errno.h"
-
+#include "stm32n6xx_nucleo.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +46,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+
+COM_InitTypeDef BspCOMInit;
 
 /* USER CODE BEGIN PV */
 
@@ -107,8 +109,11 @@ int main(void)
 	BSP_XSPI_NOR_Init(0, &xspiInit);
 	BSP_XSPI_NOR_EnableMemoryMappedMode(0);
 	MODIFY_REG(XSPI2->CR, XSPI_CR_NOPREF, HAL_XSPI_AUTOMATIC_PREFETCH_DISABLE);
+	BSP_XSPI_NOR_ResumeErase(0);
 
-//	BSP_XSPI_NOR_ResumeErase(Instance);
+	BSP_LED_Init(LED_GREEN);
+	BSP_LED_On(LED_GREEN);
+	HAL_Delay(500);
   /* USER CODE END 2 */
 
   /* Launch the application */
@@ -120,7 +125,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
 	while (1) {
-
 
     /* USER CODE END WHILE */
 

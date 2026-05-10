@@ -26,6 +26,7 @@ SUBDIRS := \
 Appli/AI/App \
 Application/User/Core \
 Application/User/Startup \
+BSP \
 Drivers/CMSIS \
 Drivers/STM32N6xx_HAL_Driver \
 Middlewares/ST/AI/Misc/Src \

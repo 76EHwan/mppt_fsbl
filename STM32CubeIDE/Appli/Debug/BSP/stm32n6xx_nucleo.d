@@ -1,13 +1,11 @@
-Appli/AI/App/network.o: \
- C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/network.c \
- ../../../Middlewares/ST/AI/Npu/ll_aton_NN_interface.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_config.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_attributes.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_cipher.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_util.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_osal.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_platform.h \
+BSP/stm32n6xx_nucleo.o: \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo.c \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo.h \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h \
+ ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal.h \
+ ../../../Appli/Core/Inc/stm32n6xx_hal_conf.h \
+ ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_rcc.h \
+ ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_def.h \
  ../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include/stm32n6xx.h \
  ../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include/stm32n657xx.h \
  ../../../Drivers/CMSIS/Include/core_cm55.h \
@@ -18,10 +16,6 @@ Appli/AI/App/network.o: \
  ../../../Drivers/CMSIS/Include/m-profile/armv8m_pmu.h \
  ../../../Drivers/CMSIS/Include/m-profile/armv7m_cachel1.h \
  ../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include/system_stm32n6xx.h \
- ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal.h \
- ../../../Appli/Core/Inc/stm32n6xx_hal_conf.h \
- ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_rcc.h \
- ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_def.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_ll_bus.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_ll_rcc.h \
@@ -38,32 +32,13 @@ Appli/AI/App/network.o: \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h \
- ../../../Middlewares/ST/AI/Npu/ATON.h \
- ../../../Middlewares/ST/AI/Npu/ATON-idxs.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_rcompat.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_lib.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_NN_interface.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_caches_interface.h \
- ../../../Middlewares/ST/AI/Npu/mcu_cache.h \
- ../../../Appli/AI/App/npu_cache.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_lib_sw_operators.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_lib.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_version.h \
- ../../../Middlewares/ST/AI/Npu/ll_sw.h \
- ../../../Middlewares/ST/AI/Npu/ecloader.h \
- ../../../Middlewares/ST/AI/Npu/ec.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_cipher.h \
- C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/network_ecblobs.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_caches_interface.h
-../../../Middlewares/ST/AI/Npu/ll_aton_NN_interface.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_config.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_attributes.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_cipher.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_util.h:
-../../../Middlewares/ST/AI/Npu/ll_aton.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_osal.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_platform.h:
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo.h:
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h:
+../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal.h:
+../../../Appli/Core/Inc/stm32n6xx_hal_conf.h:
+../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_rcc.h:
+../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_def.h:
 ../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include/stm32n6xx.h:
 ../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include/stm32n657xx.h:
 ../../../Drivers/CMSIS/Include/core_cm55.h:
@@ -74,10 +49,6 @@ Appli/AI/App/network.o: \
 ../../../Drivers/CMSIS/Include/m-profile/armv8m_pmu.h:
 ../../../Drivers/CMSIS/Include/m-profile/armv7m_cachel1.h:
 ../../../Drivers/CMSIS/Device/ST/STM32N6xx/Include/system_stm32n6xx.h:
-../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal.h:
-../../../Appli/Core/Inc/stm32n6xx_hal_conf.h:
-../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_rcc.h:
-../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_def.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_ll_bus.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_ll_rcc.h:
@@ -94,21 +65,4 @@ Appli/AI/App/network.o: \
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h:
-../../../Middlewares/ST/AI/Npu/ATON.h:
-../../../Middlewares/ST/AI/Npu/ATON-idxs.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_rcompat.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_lib.h:
-../../../Middlewares/ST/AI/Npu/ll_aton.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_NN_interface.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_caches_interface.h:
-../../../Middlewares/ST/AI/Npu/mcu_cache.h:
-../../../Appli/AI/App/npu_cache.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_lib_sw_operators.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_lib.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_version.h:
-../../../Middlewares/ST/AI/Npu/ll_sw.h:
-../../../Middlewares/ST/AI/Npu/ecloader.h:
-../../../Middlewares/ST/AI/Npu/ec.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_cipher.h:
-C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/network_ecblobs.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_caches_interface.h:
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h:

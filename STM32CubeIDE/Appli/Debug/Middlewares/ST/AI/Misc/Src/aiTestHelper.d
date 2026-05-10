@@ -36,6 +36,9 @@ Middlewares/ST/AI/Misc/Src/aiTestHelper.o: \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo.h \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h \
  ../../../Appli/AI/App/app_x-cube-ai.h \
  ../../../Middlewares/ST/AI/Inc/stai.h \
  ../../../Middlewares/ST/AI/Inc/ai_datatypes_defines.h \
@@ -102,6 +105,9 @@ Middlewares/ST/AI/Misc/Src/aiTestHelper.o: \
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h:
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo.h:
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h:
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h:
 ../../../Appli/AI/App/app_x-cube-ai.h:
 ../../../Middlewares/ST/AI/Inc/stai.h:
 ../../../Middlewares/ST/AI/Inc/ai_datatypes_defines.h:

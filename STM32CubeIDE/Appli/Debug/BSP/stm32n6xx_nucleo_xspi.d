@@ -1,6 +1,7 @@
-Appli/AI/App/npu_cache.o: \
- C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/npu_cache.c \
- C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/npu_cache.h \
+BSP/stm32n6xx_nucleo_xspi.o: \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_xspi.c \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_xspi.h \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal.h \
  ../../../Appli/Core/Inc/stm32n6xx_hal_conf.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_rcc.h \
@@ -31,8 +32,11 @@ Appli/AI/App/npu_cache.o: \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h \
- ../../../Middlewares/ST/AI/Npu/ll_aton_config.h
-C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/npu_cache.h:
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/../Components/mx25um51245g/mx25um51245g.h \
+ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/../Components/mx25um51245g/mx25um51245g_conf.h
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_xspi.h:
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_conf.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal.h:
 ../../../Appli/Core/Inc/stm32n6xx_hal_conf.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_rcc.h:
@@ -63,4 +67,6 @@ C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Appli/AI/App/npu_cache.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h:
-../../../Middlewares/ST/AI/Npu/ll_aton_config.h:
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/stm32n6xx_nucleo_errno.h:
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/../Components/mx25um51245g/mx25um51245g.h:
+C:/Users/kth59/.stm32cubeaistudio/workspace/mppt/Drivers/BSP/STM32N6xx_Nucleo/../Components/mx25um51245g/mx25um51245g_conf.h:
