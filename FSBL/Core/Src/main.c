@@ -52,6 +52,7 @@ XSPI_HandleTypeDef hxspi2;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+static void MPU_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_XSPI2_Init(void);
 /* USER CODE BEGIN PFP */
@@ -72,6 +73,9 @@ int main(void) {
 	/* USER CODE BEGIN 1 */
 
 	/* USER CODE END 1 */
+
+	/* MPU Configuration--------------------------------------------------------*/
+	MPU_Config();
 
 	/* MCU Configuration--------------------------------------------------------*/
 	HAL_Init();
@@ -104,6 +108,9 @@ int main(void) {
 	BSP_XSPI_NOR_EnableMemoryMappedMode(0);
 	MODIFY_REG(XSPI2->CR, XSPI_CR_NOPREF, HAL_XSPI_AUTOMATIC_PREFETCH_DISABLE);
 
+	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_8, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_10, GPIO_PIN_SET);
 	/* USER CODE END 2 */
 
 	/* Launch the application */
@@ -333,7 +340,7 @@ static void MX_GPIO_Init(void) {
 	/*Configure GPIO pins : PG0 PG10 PG8 */
 	GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_10 | GPIO_PIN_8;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Pull = GPIO_PULLUP;
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 	HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
@@ -346,12 +353,54 @@ static void MX_GPIO_Init(void) {
 
 /* USER CODE END 4 */
 
+/* MPU Configuration */
+
+void MPU_Config(void) {
+	MPU_Region_InitTypeDef MPU_InitStruct = { 0 };
+	MPU_Attributes_InitTypeDef MPU_AttributesInit = { 0 };
+	uint32_t primask_bit = __get_PRIMASK();
+	__disable_irq();
+
+	/* Disables the MPU */
+	HAL_MPU_Disable();
+
+	/** Initializes and configures the Region 0 and the memory to be protected
+	 */
+	MPU_InitStruct.Enable = MPU_REGION_ENABLE;
+	MPU_InitStruct.Number = MPU_REGION_NUMBER0;
+	MPU_InitStruct.BaseAddress = 0x70000000;
+	MPU_InitStruct.LimitAddress = 0x73FFFFFF;
+	MPU_InitStruct.AttributesIndex = MPU_ATTRIBUTES_NUMBER0;
+	MPU_InitStruct.AccessPermission = MPU_REGION_ALL_RW;
+	MPU_InitStruct.DisableExec = MPU_INSTRUCTION_ACCESS_ENABLE;
+	MPU_InitStruct.DisablePrivExec = MPU_PRIV_INSTRUCTION_ACCESS_ENABLE;
+	MPU_InitStruct.IsShareable = MPU_ACCESS_NOT_SHAREABLE;
+
+	HAL_MPU_ConfigRegion(&MPU_InitStruct);
+
+	/** Initializes and configures the Attribute 0 and the memory to be protected
+	 */
+	MPU_AttributesInit.Number = MPU_ATTRIBUTES_NUMBER0;
+	MPU_AttributesInit.Attributes = INNER_OUTER(MPU_NOT_CACHEABLE);
+
+	HAL_MPU_ConfigMemoryAttributes(&MPU_AttributesInit);
+	/* Enables the MPU */
+	HAL_MPU_Enable(MPU_HFNMI_PRIVDEF);
+
+	/* Exit critical section to lock the system and avoid any issue around MPU mechanism */
+	__set_PRIMASK(primask_bit);
+
+}
+
 /**
  * @brief  This function is executed in case of error occurrence.
  * @retval None
  */
 void Error_Handler(void) {
 	/* USER CODE BEGIN Error_Handler_Debug */
+	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_8, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_10, GPIO_PIN_RESET);
 	/* User can add his own implementation to report the HAL error return state */
 	__disable_irq();
 	while (1) {

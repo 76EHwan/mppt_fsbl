@@ -52,7 +52,7 @@ UART_HandleTypeDef hlpuart1;
 static void MPU_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_CACHEAXI_Init(void);
-void MX_LPUART1_UART_Init(void);
+ void MX_LPUART1_UART_Init(void);
 static void SystemIsolation_Config(void);
 /* USER CODE BEGIN PFP */
 
@@ -95,9 +95,7 @@ int main(void)
   SystemIsolation_Config();
   /* USER CODE BEGIN 2 */
 
-	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_8, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_10, GPIO_PIN_SET);
+//	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0, GPIO_PIN_RESET);
 
 	STM32CubeAI_Studio_AI_Init();
   /* USER CODE END 2 */
