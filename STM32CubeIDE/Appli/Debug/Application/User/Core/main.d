@@ -31,6 +31,8 @@ Application/User/Core/main.o: \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h \
  ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h \
+ ../../../Appli/Core/Inc/cacheaxi.h ../../../Appli/Core/Inc/main.h \
+ ../../../Appli/Core/Inc/usart.h ../../../Appli/Core/Inc/gpio.h \
  ../../../Appli/AI/App/app_x-cube-ai.h \
  ../../../Middlewares/ST/AI/Inc/stai.h \
  ../../../Middlewares/ST/AI/Inc/ai_datatypes_defines.h \
@@ -82,6 +84,10 @@ Application/User/Core/main.o: \
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_pwr_ex.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart.h:
 ../../../Drivers/STM32N6xx_HAL_Driver/Inc/stm32n6xx_hal_uart_ex.h:
+../../../Appli/Core/Inc/cacheaxi.h:
+../../../Appli/Core/Inc/main.h:
+../../../Appli/Core/Inc/usart.h:
+../../../Appli/Core/Inc/gpio.h:
 ../../../Appli/AI/App/app_x-cube-ai.h:
 ../../../Middlewares/ST/AI/Inc/stai.h:
 ../../../Middlewares/ST/AI/Inc/ai_datatypes_defines.h:

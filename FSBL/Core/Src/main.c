@@ -108,10 +108,7 @@ int main(void)
 	BSP_XSPI_NOR_EnableMemoryMappedMode(0);
 	MODIFY_REG(XSPI2->CR, XSPI_CR_NOPREF, HAL_XSPI_AUTOMATIC_PREFETCH_DISABLE);
 
-	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_0, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_8, GPIO_PIN_SET);
-	HAL_GPIO_WritePin(GPIOG, GPIO_PIN_10, GPIO_PIN_SET);
-	BSP_XSPI_NOR_ResumeErase(Instance)
+	BSP_XSPI_NOR_ResumeErase(Instance);
   /* USER CODE END 2 */
 
   /* Launch the application */
